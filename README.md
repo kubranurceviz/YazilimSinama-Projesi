@@ -1,1 +1,1 @@
-# Yaz-l-mS-nama-Projesi
+# YazilimSinama-Projesi
