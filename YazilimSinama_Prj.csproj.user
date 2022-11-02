@@ -3,4 +3,18 @@
   <PropertyGroup>
     <ShowAllFiles>false</ShowAllFiles>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="AnaSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="OperatorAtikKaydi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="tIslem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="vbGor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
 </Project>

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace yaz.sın_4
 {
-    class RecycleObject
+    public class RecycleObject
     {
         public int carbonAmount{ get; set; }
 
