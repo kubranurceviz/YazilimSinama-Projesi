@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Text;
+
+
 
 namespace yaz.sın_4
 {
@@ -9,18 +10,13 @@ namespace yaz.sın_4
     {
         SqlDataReader reader;
         SqlCommand command;
-        private SqlConnection GetMsSqlConnection()
-        {
-            string connectionString = "Data Source=!!"; //Sql adresi girilecek
-            return new SqlConnection(connectionString);
-        }
-
+        DBConnection dBConnection = new DBConnection();
         #region Bütün atık nesnlelerin sqlden veri çekme methodu
-        public List<RecycleObject> GetAllProducts()
+        public List<RecycleObject> GetAllRecycleObject()
         {
             List<RecycleObject> recycleObjects = null;
 
-            using (var connection = GetMsSqlConnection())
+            using (var connection = dBConnection.GetMsSqlConnection())
             {
                 try
                 {
@@ -63,11 +59,11 @@ namespace yaz.sın_4
         #endregion
 
         #region  Idye göre sqlden veri çekme methodu
-        public RecycleObject GetProductById(int id)
+        public RecycleObject GetRecycleObjectById(int id)
         {
             RecycleObject recycleObject = null;
 
-            using (var connection = GetMsSqlConnection())
+            using (var connection = dBConnection.GetMsSqlConnection())
             {
                 try
                 {
@@ -90,6 +86,7 @@ namespace yaz.sın_4
                            // ID = int.Parse(reader["ID"].ToString()),
                             recycleObjectName = reader["Name"].ToString(),
                            // recyclePoint = int.Parse(reader["point"]?.ToString())
+                           
                            
                         };
                     }
@@ -115,7 +112,7 @@ namespace yaz.sın_4
         {
             List<RecycleObject> recyclesObjects = null;
 
-            using (var connection = GetMsSqlConnection())
+            using (var connection = dBConnection.GetMsSqlConnection())
             {
                 try
                 {
@@ -138,8 +135,8 @@ namespace yaz.sın_4
                                 //Sutun isimleri düzgün girilecek
                                 //ID = int.Parse(reader["ID"].ToString()),
                                 recycleObjectName = reader["Name"].ToString(),
-                               // recyclePoint = int.Parse(reader["point"]?.ToString())
-                                
+                                // recyclePoint = int.Parse(reader["point"]?.ToString())
+
                             }
                         );
                     }

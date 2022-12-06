@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "urw6W+AnOa+1voVrDnW3rlIHMX6Sg9qZYVz/PBgHq4JkzmBWSyFvb60KTTKNUbTWWExSvT4AK2zapsxbiNSvRw==",
+  "dgSpecHash": "q2iYVa7YQVe5kKl1VTAgDaXFQVC7XTArQqIMfMgsLh1wt7j56afUpATqMR5OV+VRetIxZtLnAyh1NDwyqQij1g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\redli\\OneDrive\\Belgeler\\GitHub\\YazilimSinama-Projesi\\YazilimSinama_Prj.csproj",
+  "projectFilePath": "C:\\Users\\redli\\OneDrive\\Belgeler\\GitHub\\YazilimSinama-Projesi\\yaz.sın_4.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\redli\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\redli\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",

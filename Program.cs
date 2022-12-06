@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using yaz.sın_4.Forms;
 
 namespace yaz.sın_4
 {
@@ -17,7 +18,7 @@ namespace yaz.sın_4
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new KullaniciAnaSayfa());
+            Application.Run(new FirstForm());
         }
     }
 }

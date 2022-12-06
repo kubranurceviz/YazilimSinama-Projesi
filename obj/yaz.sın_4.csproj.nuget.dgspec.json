@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\redli\\OneDrive\\Belgeler\\GitHub\\YazilimSinama-Projesi\\YazilimSinama_Prj.csproj": {}
+    "C:\\Users\\redli\\OneDrive\\Belgeler\\GitHub\\YazilimSinama-Projesi\\yaz.sın_4.csproj": {}
   },
   "projects": {
-    "C:\\Users\\redli\\OneDrive\\Belgeler\\GitHub\\YazilimSinama-Projesi\\YazilimSinama_Prj.csproj": {
+    "C:\\Users\\redli\\OneDrive\\Belgeler\\GitHub\\YazilimSinama-Projesi\\yaz.sın_4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\redli\\OneDrive\\Belgeler\\GitHub\\YazilimSinama-Projesi\\YazilimSinama_Prj.csproj",
-        "projectName": "YazilimSinama_Prj",
-        "projectPath": "C:\\Users\\redli\\OneDrive\\Belgeler\\GitHub\\YazilimSinama-Projesi\\YazilimSinama_Prj.csproj",
+        "projectUniqueName": "C:\\Users\\redli\\OneDrive\\Belgeler\\GitHub\\YazilimSinama-Projesi\\yaz.sın_4.csproj",
+        "projectName": "yaz.sın_4",
+        "projectPath": "C:\\Users\\redli\\OneDrive\\Belgeler\\GitHub\\YazilimSinama-Projesi\\yaz.sın_4.csproj",
         "packagesPath": "C:\\Users\\redli\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\redli\\OneDrive\\Belgeler\\GitHub\\YazilimSinama-Projesi\\obj\\",
         "projectStyle": "PackageReference",

@@ -487,9 +487,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\redli\\OneDrive\\Belgeler\\GitHub\\YazilimSinama-Projesi\\YazilimSinama_Prj.csproj",
-      "projectName": "YazilimSinama_Prj",
-      "projectPath": "C:\\Users\\redli\\OneDrive\\Belgeler\\GitHub\\YazilimSinama-Projesi\\YazilimSinama_Prj.csproj",
+      "projectUniqueName": "C:\\Users\\redli\\OneDrive\\Belgeler\\GitHub\\YazilimSinama-Projesi\\yaz.sın_4.csproj",
+      "projectName": "yaz.sın_4",
+      "projectPath": "C:\\Users\\redli\\OneDrive\\Belgeler\\GitHub\\YazilimSinama-Projesi\\yaz.sın_4.csproj",
       "packagesPath": "C:\\Users\\redli\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\redli\\OneDrive\\Belgeler\\GitHub\\YazilimSinama-Projesi\\obj\\",
       "projectStyle": "PackageReference",
@@ -547,7 +547,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.413\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.414\\RuntimeIdentifierGraph.json"
       }
     }
   }
