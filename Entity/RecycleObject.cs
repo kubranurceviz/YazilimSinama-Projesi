@@ -6,6 +6,7 @@ namespace yaz.sın_4
 {
     public class RecycleObject
     {
+        public int ID { get; set; }
         public int carbonAmount{ get; set; }
 
         public int quantityOfRecycleObject { get; set; }
@@ -15,14 +16,18 @@ namespace yaz.sın_4
         public double recycleCoin { get; set; }
        
         private const double VALUE_OF_RECYCLECOIN = 0.00000001;
-        double conversionFromCtoRC(RecycleObject recycleObject)
+         public double conversionFromCtoRC(RecycleObject recycleObject)
         {
-            recycleObject.recycleCoin = recycleObject.quantityOfRecycleObject * recycleObject.carbonAmount * VALUE_OF_RECYCLECOIN;
+           recycleObject.recycleCoin = recycleObject.quantityOfRecycleObject * recycleObject.carbonAmount * VALUE_OF_RECYCLECOIN;
            return recycleCoin; 
         
         }
-        //Düzeltilecek
 
+      
+        public override string ToString()
+        {
+            return recycleObjectName;
+        }
 
 
     }

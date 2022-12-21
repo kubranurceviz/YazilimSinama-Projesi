@@ -83,6 +83,7 @@ namespace yaz.sın_4
             this.comboBoxAtikNesne.Name = "comboBoxAtikNesne";
             this.comboBoxAtikNesne.Size = new System.Drawing.Size(551, 28);
             this.comboBoxAtikNesne.TabIndex = 4;
+            this.comboBoxAtikNesne.SelectedIndexChanged += new System.EventHandler(this.comboBoxAtikNesne_SelectedIndexChanged);
             // 
             // btnDonustur
             // 
@@ -102,6 +103,7 @@ namespace yaz.sın_4
             this.btnHesabaAktar.TabIndex = 3;
             this.btnHesabaAktar.Text = "Hesaba Aktar";
             this.btnHesabaAktar.UseVisualStyleBackColor = true;
+            this.btnHesabaAktar.Click += new System.EventHandler(this.btnHesabaAktar_Click);
             // 
             // txtBoxAdet
             // 
@@ -109,6 +111,7 @@ namespace yaz.sın_4
             this.txtBoxAdet.Name = "txtBoxAdet";
             this.txtBoxAdet.Size = new System.Drawing.Size(94, 27);
             this.txtBoxAdet.TabIndex = 2;
+            this.txtBoxAdet.TextChanged += new System.EventHandler(this.txtBoxAdet_TextChanged);
             // 
             // lblAtikNesneOzellik
             // 
@@ -184,6 +187,7 @@ namespace yaz.sın_4
             this.btnGetPerson.TabIndex = 3;
             this.btnGetPerson.Text = "Kullanıcıyı Getir";
             this.btnGetPerson.UseVisualStyleBackColor = true;
+            this.btnGetPerson.Click += new System.EventHandler(this.btnGetPerson_Click);
             // 
             // buttonIptal
             // 
@@ -212,6 +216,7 @@ namespace yaz.sın_4
             this.Controls.Add(this.groupBox1);
             this.Name = "OperatorAtikKaydi";
             this.Text = "OperatorAtikKaydi";
+            this.Load += new System.EventHandler(this.OperatorAtikKaydi_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
