@@ -26,7 +26,7 @@ namespace yaz.sın_4
       
         public override string ToString()
         {
-            return recycleObjectName;
+            return recycleObjectName  +" "+ typeOfRecycle +" "+ carbonAmount.ToString();
         }
 
 

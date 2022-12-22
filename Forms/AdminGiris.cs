@@ -23,7 +23,11 @@ namespace yaz.sın_4.Forms
             {
                 OperatorAtikKaydi operatorAtikKaydi = new OperatorAtikKaydi();
                 operatorAtikKaydi.Show();
-                this.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Hatalı değer girdiniz!");
             }
         }
     }

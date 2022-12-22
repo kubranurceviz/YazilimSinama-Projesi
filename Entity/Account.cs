@@ -24,7 +24,8 @@ namespace yaz.sın_4
             this.person = person;
         }
        public void transfer( Person reciever, double _transferAmount)
-        {
+        {  
+
             recycleCoin -= _transferAmount ;
             reciever.account.recycleCoin += _transferAmount;
 
@@ -32,13 +33,8 @@ namespace yaz.sın_4
         }
         
         public double recycleCoin { get; set; }
-        public  double transferAmount { get; set; } // gerek var mi?
        
-        public int quantityOfCarbon { get; set; }
-
-
-
-
+       
 
     }
 }

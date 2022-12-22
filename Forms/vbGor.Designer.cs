@@ -29,27 +29,10 @@ namespace yaz.sın_4
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblMevcutCmiktari = new System.Windows.Forms.Label();
-            this.txbMevcutCmiktari = new System.Windows.Forms.TextBox();
             this.lblMevcutRCmiktari = new System.Windows.Forms.Label();
             this.txbMevcutRCmiktari = new System.Windows.Forms.TextBox();
+            this.labelİism = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // lblMevcutCmiktari
-            // 
-            this.lblMevcutCmiktari.AutoSize = true;
-            this.lblMevcutCmiktari.Location = new System.Drawing.Point(64, 49);
-            this.lblMevcutCmiktari.Name = "lblMevcutCmiktari";
-            this.lblMevcutCmiktari.Size = new System.Drawing.Size(182, 20);
-            this.lblMevcutCmiktari.TabIndex = 1;
-            this.lblMevcutCmiktari.Text = "Mevcut Carbon (C) miktarı";
-            // 
-            // txbMevcutCmiktari
-            // 
-            this.txbMevcutCmiktari.Location = new System.Drawing.Point(64, 85);
-            this.txbMevcutCmiktari.Name = "txbMevcutCmiktari";
-            this.txbMevcutCmiktari.Size = new System.Drawing.Size(227, 27);
-            this.txbMevcutCmiktari.TabIndex = 2;
             // 
             // lblMevcutRCmiktari
             // 
@@ -67,15 +50,23 @@ namespace yaz.sın_4
             this.txbMevcutRCmiktari.Size = new System.Drawing.Size(227, 27);
             this.txbMevcutRCmiktari.TabIndex = 4;
             // 
+            // labelİism
+            // 
+            this.labelİism.AutoSize = true;
+            this.labelİism.Location = new System.Drawing.Point(64, 33);
+            this.labelİism.Name = "labelİism";
+            this.labelİism.Size = new System.Drawing.Size(50, 20);
+            this.labelİism.TabIndex = 5;
+            this.labelİism.Text = "label1";
+            // 
             // vbGor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 409);
+            this.ClientSize = new System.Drawing.Size(459, 350);
+            this.Controls.Add(this.labelİism);
             this.Controls.Add(this.txbMevcutRCmiktari);
             this.Controls.Add(this.lblMevcutRCmiktari);
-            this.Controls.Add(this.txbMevcutCmiktari);
-            this.Controls.Add(this.lblMevcutCmiktari);
             this.Name = "vbGor";
             this.Text = "Varlıklar ve Borçları Görüntüleme";
             this.Load += new System.EventHandler(this.vbGor_Load);
@@ -85,9 +76,8 @@ namespace yaz.sın_4
         }
 
         #endregion
-        private System.Windows.Forms.Label lblMevcutCmiktari;
-        private System.Windows.Forms.TextBox txbMevcutCmiktari;
         private System.Windows.Forms.Label lblMevcutRCmiktari;
         private System.Windows.Forms.TextBox txbMevcutRCmiktari;
+        private System.Windows.Forms.Label labelİism;
     }
 }

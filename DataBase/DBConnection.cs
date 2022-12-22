@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Text;
-
+﻿using System.Data.SqlClient;
 
 namespace yaz.sın_4
 {
     class DBConnection
     {
         public SqlConnection GetMsSqlConnection()
-        {
-            string connectionString = "Data Source=!!"; //Sql adresi girilecek
+        {                               
+            string connectionString = "Data Source=. ; initial catalog=YazilimSinama; User id = sa; Integrated Security=True";
             return new SqlConnection(connectionString);
         }
     }

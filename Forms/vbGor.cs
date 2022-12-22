@@ -11,7 +11,7 @@ namespace yaz.sın_4
     public partial class vbGor : Form
     {
 
-        //***ÖNEMLİ NOT: borç ise -'li sayıları kullanmayı düşündüm!!
+        
         Person person;
         public vbGor(Person person)
         {
@@ -21,7 +21,7 @@ namespace yaz.sın_4
 
         private void vbGor_Load(object sender, EventArgs e)
         {
-            txbMevcutCmiktari.Text = person.account.quantityOfCarbon.ToString();
+            labelİism.Text = person.ToString();
             txbMevcutRCmiktari.Text = person.account.recycleCoin.ToString();
         }
     }

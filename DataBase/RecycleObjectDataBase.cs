@@ -11,6 +11,7 @@ namespace yaz.sın_4
         SqlDataReader reader;
         SqlCommand command;
         DBConnection dBConnection = new DBConnection();
+
         #region Bütün atık nesnlelerin sqlden veri çekme methodu
         public List<RecycleObject> GetAllRecycleObject()
         {
@@ -22,7 +23,7 @@ namespace yaz.sın_4
                 {
                     connection.Open();
 
-                    string sql = "select * from tabloAdi"; //Tablo adı düzeltilecek
+                    string sql = "select * from RecycleObject"; 
 
                     command = new SqlCommand(sql, connection);
 
@@ -34,11 +35,10 @@ namespace yaz.sın_4
                         recycleObjects.Add(
                             new RecycleObject
                             {
-                                //Sutun isimleri düzgün girilecek
-                                // ID= int.Parse(reader["ID"].ToString()),
-                                recycleObjectName = reader["Name"].ToString(),
-                                carbonAmount = int.Parse(reader["point"]?.ToString())
-                              
+                                carbonAmount = reader.IsDBNull(1) ? 0 : reader.GetInt32(1),
+                                typeOfRecycle = reader.IsDBNull(3) ? string.Empty : reader.GetString(3),
+                                recycleObjectName = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
+                                ID = reader.IsDBNull(0) ? 0 : reader.GetInt32(0)
                             }
                         );
                     }
@@ -69,10 +69,10 @@ namespace yaz.sın_4
                 {
                     connection.Open();
 
-                    string sql = "select * from tabloAdi where Id=@id"; //Tablo adı düzeltilecek
+                    string sql = "select * from RecycleObject where id=@id"; 
 
                      command = new SqlCommand(sql, connection);
-                    command.Parameters.AddWithValue("@id", id); //Sql tablosuna göre düzeltilecek 
+                    command.Parameters.AddWithValue("@id", id); 
 
                     reader = command.ExecuteReader();
 
@@ -82,13 +82,12 @@ namespace yaz.sın_4
                     {
                         recycleObject = new RecycleObject()
                         {
-                           //Sutun isimleri düzgün girilecek
-                           // ID = int.Parse(reader["ID"].ToString()),
-                            recycleObjectName = reader["Name"].ToString(),
-                           // recyclePoint = int.Parse(reader["point"]?.ToString())
-                           
-                           
-                        };
+                            carbonAmount = reader.IsDBNull(1) ? 0 : reader.GetInt32(1), 
+                            typeOfRecycle = reader.IsDBNull(3) ? string.Empty : reader.GetString(3),
+                            recycleObjectName = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
+                            ID = reader.IsDBNull(0) ? 0 : reader.GetInt32(0)
+
+                    };
                     }
 
                     reader.Close();
@@ -107,54 +106,5 @@ namespace yaz.sın_4
         }
         #endregion
 
-        #region Girilen isime göre  sqlden veri çekme methodu
-        public List<RecycleObject> Find(string name)
-        {
-            List<RecycleObject> recyclesObjects = null;
-
-            using (var connection = dBConnection.GetMsSqlConnection())
-            {
-                try
-                {
-                    connection.Open();
-
-                    string sql = "select * from tabloAdi where name LIKE %@name%";  //Tablo adı düzeltilecek
-
-                    command = new SqlCommand(sql, connection);
-                    command.Parameters.AddWithValue("@name", name); //Sql tablosuna göre düzeltilecek 
-
-                    reader = command.ExecuteReader();
-
-                    recyclesObjects = new List<RecycleObject>();
-
-                    while (reader.Read())
-                    {
-                        recyclesObjects.Add(
-                            new RecycleObject
-                            {
-                                //Sutun isimleri düzgün girilecek
-                                //ID = int.Parse(reader["ID"].ToString()),
-                                recycleObjectName = reader["Name"].ToString(),
-                                // recyclePoint = int.Parse(reader["point"]?.ToString())
-
-                            }
-                        );
-                    }
-
-                    reader.Close();
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-                finally
-                {
-                    connection.Close();
-                }
-            }
-
-            return recyclesObjects;
-        }
-        #endregion
     }
 }

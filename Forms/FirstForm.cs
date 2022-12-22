@@ -19,14 +19,14 @@ namespace yaz.sın_4.Forms
         {
             AdminGiris adminGiris = new AdminGiris();
             adminGiris.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void btnUser_Click(object sender, EventArgs e)
         {
             Login login = new Login();
             login.Show();
-            this.Close();
+            this.Hide();
         }
     }
 }

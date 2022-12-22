@@ -43,6 +43,12 @@ namespace yaz.sın_4
             this.textBoxKaydolSifre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxKaydolAd = new System.Windows.Forms.TextBox();
+            this.textBoxFirstName = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBoxLastName = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -124,20 +130,26 @@ namespace yaz.sın_4
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnKaydol);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.textBoxEmail);
+            this.groupBox2.Controls.Add(this.textBoxLastName);
+            this.groupBox2.Controls.Add(this.textBoxFirstName);
             this.groupBox2.Controls.Add(this.textBoxKaydolSifre);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.textBoxKaydolAd);
-            this.groupBox2.Location = new System.Drawing.Point(394, 70);
+            this.groupBox2.Location = new System.Drawing.Point(394, 40);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(337, 442);
+            this.groupBox2.Size = new System.Drawing.Size(395, 509);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Kaydol";
             // 
             // btnKaydol
             // 
-            this.btnKaydol.Location = new System.Drawing.Point(195, 352);
+            this.btnKaydol.Location = new System.Drawing.Point(233, 443);
             this.btnKaydol.Name = "btnKaydol";
             this.btnKaydol.Size = new System.Drawing.Size(94, 29);
             this.btnKaydol.TabIndex = 2;
@@ -148,7 +160,7 @@ namespace yaz.sın_4
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(56, 206);
+            this.label4.Location = new System.Drawing.Point(82, 352);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 20);
             this.label4.TabIndex = 1;
@@ -156,7 +168,7 @@ namespace yaz.sın_4
             // 
             // textBoxKaydolSifre
             // 
-            this.textBoxKaydolSifre.Location = new System.Drawing.Point(56, 239);
+            this.textBoxKaydolSifre.Location = new System.Drawing.Point(82, 385);
             this.textBoxKaydolSifre.Name = "textBoxKaydolSifre";
             this.textBoxKaydolSifre.Size = new System.Drawing.Size(210, 27);
             this.textBoxKaydolSifre.TabIndex = 0;
@@ -164,7 +176,7 @@ namespace yaz.sın_4
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(56, 111);
+            this.label3.Location = new System.Drawing.Point(85, 44);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 20);
             this.label3.TabIndex = 1;
@@ -172,10 +184,58 @@ namespace yaz.sın_4
             // 
             // textBoxKaydolAd
             // 
-            this.textBoxKaydolAd.Location = new System.Drawing.Point(56, 144);
+            this.textBoxKaydolAd.Location = new System.Drawing.Point(85, 82);
             this.textBoxKaydolAd.Name = "textBoxKaydolAd";
             this.textBoxKaydolAd.Size = new System.Drawing.Size(210, 27);
             this.textBoxKaydolAd.TabIndex = 0;
+            // 
+            // textBoxFirstName
+            // 
+            this.textBoxFirstName.Location = new System.Drawing.Point(82, 155);
+            this.textBoxFirstName.Name = "textBoxFirstName";
+            this.textBoxFirstName.Size = new System.Drawing.Size(210, 27);
+            this.textBoxFirstName.TabIndex = 0;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(85, 132);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(36, 20);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "İsim";
+            // 
+            // textBoxLastName
+            // 
+            this.textBoxLastName.Location = new System.Drawing.Point(82, 231);
+            this.textBoxLastName.Name = "textBoxLastName";
+            this.textBoxLastName.Size = new System.Drawing.Size(210, 27);
+            this.textBoxLastName.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(82, 199);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 20);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Soyisim";
+            // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.Location = new System.Drawing.Point(82, 305);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(210, 27);
+            this.textBoxEmail.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(82, 271);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(46, 20);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "email";
             // 
             // Login
             // 
@@ -210,5 +270,11 @@ namespace yaz.sın_4
         private System.Windows.Forms.TextBox textBoxKaydolAd;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnKaydol;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.TextBox textBoxLastName;
+        private System.Windows.Forms.TextBox textBoxFirstName;
     }
 }

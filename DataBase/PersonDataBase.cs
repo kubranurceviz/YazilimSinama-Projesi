@@ -20,7 +20,7 @@ namespace yaz.sın_4
                 {
                     connection.Open();
 
-                    string sql = "select * from tabloAdi where hash=@hash"; //Tablo adı düzeltilecek
+                    string sql = "select * from Person where hashCode=@hash"; //Tablo adı düzeltilecek
 
                     command = new SqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@hash", hash); //Sql tablosuna göre düzeltilecek 
@@ -33,11 +33,12 @@ namespace yaz.sın_4
                     {
                         person = new Person()
                         {
-                            //Sutun isimleri düzgün girilecek
-                            // ID = int.Parse(reader["ID"].ToString()),
-                            username = reader["Name"].ToString(),
-                            // recyclePoint = int.Parse(reader["point"]?.ToString())
-                            
+                            username = reader.IsDBNull(0) ? string.Empty : reader.GetString(0),
+                            lastname = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
+                            firstname = reader.IsDBNull(1) ? string.Empty : reader.GetString(1),
+                            password = reader.IsDBNull(5) ? string.Empty : reader.GetString(5),
+                            email= reader.IsDBNull(3) ? string.Empty : reader.GetString(3),
+                            Hash = reader.IsDBNull(4) ? string.Empty : reader.GetString(4),
                         };
                     }
 
@@ -65,7 +66,7 @@ namespace yaz.sın_4
                 {
                     connection.Open();
 
-                    string sql = "select * from tabloAdi where hash=@hash"; //Tablo adı düzeltilecek
+                    string sql = "select * from Account where hashCode=@hash"; //Tablo adı düzeltilecek
 
                     command = new SqlCommand(sql, connection);
                     command.Parameters.AddWithValue("@hash", hash); //Sql tablosuna göre düzeltilecek 
@@ -77,12 +78,8 @@ namespace yaz.sın_4
                     if (reader.HasRows)
                     {
                         account = new Account()
-                        {
-                            //Sutun isimleri düzgün girilecek
-                            // ID = int.Parse(reader["ID"].ToString()),
-                            recycleCoin = reader.GetDouble(0),
-                            // recyclePoint = int.Parse(reader["point"]?.ToString())
-
+                        {                
+                           recycleCoin = reader.GetDouble(1)
                         };
                     }
 
@@ -111,15 +108,18 @@ namespace yaz.sın_4
                 {
                     connection.Open();
 
-                    string sql = "insert into tabloAdi () VALUES ()"; //Sorgu düzeltilecek
+                    string sql = "insert into Person (username,lastname,firstname,password,hashCode,email) values(@username,@lastname,@firstname,@password,@hashCode,@email)"; 
                     SqlCommand command = new SqlCommand(sql, connection);
 
-                    command.Parameters.AddWithValue("@personname", p.username);//Paramtere eklenecek
-                
+                    command.Parameters.AddWithValue("@username", p.username);
+                    command.Parameters.AddWithValue("@lastname", p.lastname);
+                    command.Parameters.AddWithValue("@firstname", p.firstname);
+                    command.Parameters.AddWithValue("@password", p.password);
+                    command.Parameters.AddWithValue("@hashCode", p.Hash);
+                    command.Parameters.AddWithValue("@email", p.email);
 
                     result = command.ExecuteNonQuery();
-
-                    Console.WriteLine($"{result} adet kayıt eklendi");
+ 
 
                 }
                 catch (Exception e)
@@ -144,15 +144,13 @@ namespace yaz.sın_4
                 {
                     connection.Open();
 
-                    string sql = "insert into tabloAdi () VALUES ()"; //Sorgu düzeltilecek
+                    string sql = "insert into Account (hashCode,recycleCoin) VALUES (@hashCode,@recycleCoin)"; 
                     SqlCommand command = new SqlCommand(sql, connection);
 
-                    command.Parameters.AddWithValue("@personname", account.recycleCoin);//Paramtere eklenecek
-
+                    command.Parameters.AddWithValue("@recycleCoin", account.recycleCoin);
+                    command.Parameters.AddWithValue("@hashCode", account.person.Hash);
 
                     result = command.ExecuteNonQuery();
-
-                    Console.WriteLine($"{result} adet kayıt eklendi");
 
                 }
                 catch (Exception e)
@@ -178,12 +176,11 @@ namespace yaz.sın_4
                 {
                     connection.Open();
 
-                    string sql = "update tabloAdi set ProductName=@productname, UnitPrice=@unitprice where ProductId=@productid"; //Sorgu düzeltilecek
+                    string sql = "update Account set recycleCoin=@recycleCoin where hashCode=@hashCode"; 
                     SqlCommand command = new SqlCommand(sql, connection);
 
-                    command.Parameters.AddWithValue("@productname", account.person.Hash);
-                    command.Parameters.AddWithValue("@unitprice", account.recycleCoin);
-                 
+                    command.Parameters.AddWithValue("@hashCode", account.person.Hash);
+                    command.Parameters.AddWithValue("@recycleCoin", account.recycleCoin);
 
                     result = command.ExecuteNonQuery();
 

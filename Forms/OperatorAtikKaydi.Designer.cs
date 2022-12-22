@@ -197,6 +197,7 @@ namespace yaz.sın_4
             this.buttonIptal.TabIndex = 3;
             this.buttonIptal.Text = "İptal";
             this.buttonIptal.UseVisualStyleBackColor = true;
+            this.buttonIptal.Click += new System.EventHandler(this.buttonIptal_Click);
             // 
             // label7
             // 
